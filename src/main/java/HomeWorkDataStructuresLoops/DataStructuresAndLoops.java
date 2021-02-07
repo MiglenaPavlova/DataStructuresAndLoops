@@ -83,23 +83,29 @@ public class DataStructuresAndLoops {
            System.out.println("\n5. Task: Print the not divisible by 3 and 7 numbers from the list \nNumbers of the arraylist that can not be divided by 3 or 7 are: " + printMyNumberlist);
         }
 
-        // Fobonacci Numbers
+        // Fibonacci Numbers
         public static void fibonacciNumbers(){
-            int enterNum, firstNumber = 0, secondNumber = 1;
+            int enterNum = 0;
+            int firstNumber = 0;
+            int secondNumber = 1;
             System.out.println("\n6. Task: Print the Fibonacci sequence \nHow many numbers you want in the sequence:");
             Scanner scanner = new Scanner(System.in);
             enterNum = scanner.nextInt();
             System.out.print("Fibonacci Series of "+enterNum+" numbers:");
+            int sumAllFibonacci = 0;
 
             int i=1;
             while(i<=enterNum)
             {
                 System.out.print(firstNumber+" ");
                 int sumOfFirstAndSecond = firstNumber + secondNumber;
+                sumAllFibonacci += firstNumber;
                 firstNumber = secondNumber;
                 secondNumber = sumOfFirstAndSecond;
                 i++;
             }
+            System.out.print("\nSum of all Fibonacci numbers is : " + sumAllFibonacci );
+
 
         }
 
